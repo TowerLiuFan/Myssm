@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>mybatis_springmvc_spring</display-name>
   <welcome-file-list>
-    <welcome-file>/WEB-INF/page/login.jsp</welcome-file>
+    <welcome-file>/WEB-INF/index.jsp</welcome-file>
   </welcome-file-list>
   
   <!--加载springIOC容器  -->
@@ -31,6 +31,12 @@
   	<servlet-name>springmvc</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+  <!-- 关闭对静态资源的访问 -->
+  <servlet-mapping>   
+        <servlet-name>default</servlet-name>    
+        <url-pattern>*.jpg</url-pattern>    
+  </servlet-mapping> 
   
   <!--编码过滤器  -->
   <filter>

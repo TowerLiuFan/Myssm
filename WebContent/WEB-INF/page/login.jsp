@@ -17,13 +17,15 @@
     #submit:HOVER{cursor:pointer;background:#1A8ED9;}
     #message{color:red;margin-top: 10px;}
 </style>
+<script type="text/javascript">
+</script>
 </head>
 <body>
 		<div id="login">
 		<h3 align="center" style="height:40px;background:#1A8ED9;line-height:40px;border-radius:10px 10px 0px 0px;">用户登录</h3>
 		<form action="login" method = "post">
-				<div id="username">用户名：<input type="text" name="username" /></div>
-				<div id="password">&nbsp;密码：<input type="password" name="password" /></div>
+				<div id="username">用户名：<input type="text" name="username" value="请输入您的用户" style="height:19px;" onfocus="javascript:if(this.value=='请输入您的用户')this.value='';"/></div>
+				<div id="password">&nbsp;密码：<input type="password" name="password" style="height:19px;"placeholder="请输入您的密码" /></div>
 				<input id="submit" type="submit" value="登录" /> 
 				<div id="message" align="center">${loginFlag}</div>
 		</form>

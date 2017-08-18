@@ -30,28 +30,48 @@ public class UserLoginController {
 			@Autowired
 			private HttpServletResponse response;
 	
+			
+			/**
+			 * 登录验证
+			 * @ModelAndView
+			 */
 			@RequestMapping("/login")
 			public ModelAndView login(){
 				
-				String username = request.getParameter("username").trim();
-				String password = request.getParameter("password").trim();
+				String username=(request.getParameter("username")==null||request.getParameter("username").trim().equals(""))?null:request.getParameter("username");
+				String password=(request.getParameter("password")==null||request.getParameter("password").trim().equals(""))?null:request.getParameter("password");
 				ModelAndView  modelAndView = new ModelAndView();
 				Map<String,Object> params = new HashMap<String,Object>();
 				params.put("USERNAME", username);
 				params.put("PASSWORD", password);
 				List<Map<String, Object>> userList = this.userLoginServiceImpl.userLogin(params);
 				System.out.println("userList-->"+userList);
-				if(userList!=null || !"".equals(userList)){
-					modelAndView.addObject("flagLogin", "成功");
+				if(userList.size()>0){
+					modelAndView.addObject("loginFlag", "登录成功");
 					modelAndView.setViewName("main");
+				}else{
+					if(username == null && password!=null){
+						modelAndView.addObject("loginFlag", "用户名不能为空，请输入用户名！");
+						modelAndView.setViewName("login");
+					}else if(password == null && username!=null){
+						modelAndView.addObject("loginFlag", "密码不能为空，请输入密码！");
+						modelAndView.setViewName("login");
+					}else if(password == null && username==null){
+						modelAndView.addObject("loginFlag", "用户名和密码不能为空！");
+						modelAndView.setViewName("login");
+					}else{
+						modelAndView.addObject("loginFlag", "用户名或密码错误，请重新输入");
+						modelAndView.setViewName("login");
+					}
+					
 				}
-					
-					
-				
-				
-				
-				
 				return modelAndView;
-				 
+			}
+			
+			@RequestMapping("/toLogin")
+			public ModelAndView toLogin(){
+				ModelAndView modelAndView = new ModelAndView();
+				modelAndView.setViewName("login");
+				return modelAndView;
 			}
 }
