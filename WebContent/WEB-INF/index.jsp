@@ -7,14 +7,14 @@
 <title>Insert title here</title>
 <style type="text/css">
 	*{margin:0;padding:0}
- 	body{background:#ABB7C4;} 
+ 	body{background:#ABB7C4;}  
     #index{
     		height:580px;width:1280px;
-    		background-image:url("images/1.jpg");
+    		background-image:url("images/world.png");
     		background-repeat:no-repeat;
     		margin:20px auto;
     		background-size:1280px 580px;
-    		opacity: 0.7;osition: relative;
+    		position: relative;
     	}
     #clock{
            z-index:10;font-size:30px;
@@ -27,8 +27,9 @@
 	   		 height:25px;text-decoration:none;
 	   		 position:absolute;top:100px;
 	   		 left:1123px;font-size:20px;color:pink;
+	   		 font-weight:900;font-family:"微软雅黑";
     	}
-    #toLogin:HOVER{font-size:22px;}	  	
+    #toLogin:HOVER{font-size:22px;font-weight:900;font-family:"微软雅黑"}	  	
 </style>
 <script type="text/javascript">
 		
@@ -43,10 +44,10 @@
      
 		 //文字颜色闪烁
 		 setInterval(function(){
-			var color="#f00|#0f0|#00f|#880|#808|#088|yellow|green|blue|gray|pink"; 
+			var color="red|orange|yellow|green|blue|purple|pink"; 
 			color = color.split("|");
 			document.getElementById("toLogin").style.color = color[parseInt(Math.random() * color.length)];
-		 },200); 
+		 },400); 
 		  
 </script>
 </head>
@@ -54,6 +55,28 @@
 	  <div id="index">
 	      <div id="clock"></div>
 	      <a id="toLogin" href="toLogin">进入登录页面</a>
-	  </div>	
+	  </div>
+	<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>tpwidget("init", {
+    "flavor": "bubble",
+    "location": "WTTE97PU94T9",
+    "geolocation": "enabled",
+    "position": "top-left",
+    "margin": "40px 100px",
+    "language": "zh-chs",
+    "unit": "c",
+    "theme": "chameleon",
+    "uid": "U157956339",
+    "hash": "7ff3753d38dc317383e862f639925760"
+});
+tpwidget("show");</script>
 </body>
 </html>
+
+
+
+
+
+
+
+

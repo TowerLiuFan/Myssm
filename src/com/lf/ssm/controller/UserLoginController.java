@@ -45,12 +45,13 @@ public class UserLoginController {
 				params.put("PASSWORD", password);
 				List<Map<String, Object>> userList = this.userLoginServiceImpl.userLogin(params);
 				System.out.println("userList-->"+userList);
+				
 				if(userList.size()>0){
 					 if(username == null && password == null){
 						 modelAndView.addObject("loginFlag", "用户名和密码不能为空！");
 						 modelAndView.setViewName("login");
 					 }else{
-						 modelAndView.addObject("loginFlag", "登录成功");
+						 modelAndView.addObject("loginFlag", "登录成功,");
 						 modelAndView.setViewName("main");
 					 }
 				 }else{
@@ -64,11 +65,15 @@ public class UserLoginController {
 						modelAndView.addObject("loginFlag", "用户名或密码错误，请重新输入");
 						modelAndView.setViewName("login");
 					}
-					
-				}
+			   }
+				 
 				return modelAndView;
 			}
 			
+			/**
+			 * 从首页到登录页面
+			 * @ModelAndView
+			 */
 			@RequestMapping("/toLogin")
 			public ModelAndView toLogin(){
 				ModelAndView modelAndView = new ModelAndView();

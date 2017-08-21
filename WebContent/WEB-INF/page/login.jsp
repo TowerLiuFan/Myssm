@@ -7,26 +7,50 @@
 <title>Insert title here</title>
 <style type="text/css">
 	*{margin:0px;padding:0;}
-	body{background:lightgray;}
-    #login{width:300px;height:280px;top:200px;left:900px;border: 1px solid gray;position: absolute;}
+/* 	body{background-image:url("images/5.jpg");background-size:1200px 450px;background-repeat:no-repeat;} */
+    #login{width:300px;height:280px;top:200px;left:900px;border: 1px solid gray;position:absolute;}
 	#login{background:white;border-radius:10px;}
-	#username{display:block;position:absolute;top:120px;left:23px;}
+	#username{display:block;position:absolute;top:100px;left:23px;outline:none;}
 	#password{display:block;position:absolute;top:160px;left:23px;}
-	#submit{display:block;width:40px;height:32px;background:skyblue;position:absolute;top:232px;left:210px;}
-    #submit{border:0px;border-radius:5px;}
-    #submit:HOVER{cursor:pointer;background:#1A8ED9;}
-    #message{color:red;margin-top: 10px;}
+	#submit{
+			display:block;width:32px;height:32px;
+			position:absolute;top:232px;left:210px;
+			background-image:url("images/submit_.png");
+			background-repeat:no-repeat;
+			background-position:0px 0px;
+			background-color:white;
+			border:0;
+			outline-width:0;
+	  }
+    #submit:HOVER{cursor:pointer;background-image:url("images/submit.png");}
+    #message{color:red;margin-top:10px;font-family:"微软雅黑";}
+    #user{
+    		display:inline-block;width:32px;height:32px;
+    		background-image:url("images/user.png");
+    		background-position:0px 0px;
+    		position:absolute;top:0px; left:0px;
+         }
+    #pwd{
+            display:inline-block;width:32px;height:32px;
+    		background-image:url("images/pwd.png");
+    		background-position:0px 0px;
+    		position:absolute;top:0px; left:0px;
+        }
 </style>
 <script type="text/javascript">
+       //在3秒后隐藏提示信息
+       setInterval(function(){
+    	   document.getElementById("message").style.display="none";
+       },2000);
 </script>
 </head>
-<body>
+<body style="background:lightgray";>
 		<div id="login">
 		<h3 align="center" style="height:40px;background:#1A8ED9;line-height:40px;border-radius:10px 10px 0px 0px;">用户登录</h3>
 		<form action="login" method = "post">
-				<div id="username">用户名：<input type="text" name="username" value="请输入您的用户" style="height:19px;" onfocus="javascript:if(this.value=='请输入您的用户')this.value='';"/></div>
-				<div id="password">&nbsp;密码：<input type="password" name="password" style="height:19px;"placeholder="请输入您的密码" /></div>
-				<input id="submit" type="submit" value="登录" /> 
+				<div id="username"><a id="user"></a><input type="text" name="username" value="请输入您的用户" style="height:27px;width:185px;margin-left:40px;" onfocus="javascript:if(this.value=='请输入您的用户')this.value='';"/></div>
+				<div id="password"><a id="pwd"></a><input type="password" name="password" style="height:27px;width:185px;margin-left:40px;"placeholder="请输入您的密码" /></div>
+				<input id="submit" type="submit" value="" /> 
 				<div id="message" align="center">${loginFlag}</div>
 		</form>
 		</div>
