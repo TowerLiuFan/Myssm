@@ -56,18 +56,18 @@
 	      <div id="clock"></div>
 	      <a id="toLogin" href="toLogin">进入登录页面</a>
 	  </div>
-	<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
+<script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
 <script>tpwidget("init", {
     "flavor": "bubble",
     "location": "WTTE97PU94T9",
-    "geolocation": "enabled",
+    "geolocation": "disabled",
     "position": "top-left",
     "margin": "40px 100px",
     "language": "zh-chs",
     "unit": "c",
     "theme": "chameleon",
     "uid": "U157956339",
-    "hash": "7ff3753d38dc317383e862f639925760"
+    "hash": "877671eaedadc3d1b0318963881380b2"
 });
 tpwidget("show");</script>
 </body>

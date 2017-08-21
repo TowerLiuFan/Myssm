@@ -1,5 +1,6 @@
 package com.lf.ssm.controller;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,12 +8,15 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.struts2.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.lf.ssm.service.impl.UserLoginServiceImpl;
+import com.lf.ssm.util.FileUploadingUtil;
 
 /**
  * 
@@ -80,4 +84,65 @@ public class UserLoginController {
 				modelAndView.setViewName("login");
 				return modelAndView;
 			}
+			
+			
+			/**
+			 * 主页到图片抓取页面的跳转
+			 * @ModelAndView
+			 */
+			@RequestMapping("/searchDown")
+			public ModelAndView searchDown(){
+				ModelAndView modelAndView = new ModelAndView();
+				modelAndView.setViewName("util/search");
+				return modelAndView;
+		 }
+			
+			/**
+			 * 抓取图片回到原本页面
+			 * @ModelAndView
+			 */
+			@RequestMapping("/search")
+			public ModelAndView search(){
+				ModelAndView modelAndView = new ModelAndView();
+				modelAndView.setViewName("util/search");
+				return modelAndView;
+			}
+			
+			/**
+			 * 主页到文件上传页面的跳转
+			 * @ModelAndView
+			 */
+			@RequestMapping("/upLoading")
+			public ModelAndView upLoading(){
+				ModelAndView modelAndView = new ModelAndView();
+				modelAndView.setViewName("util/upload");
+				return modelAndView;
+		 }
+			
+			/**
+			 * 上传批量数据
+			 * @throws JSONException 
+			 * @throws IOException 
+			 * @ModelAndView
+			 */
+			@RequestMapping("/dataUpLoading")
+			@ResponseBody
+			public List<HashMap<String, Object>>  dataUpLoading() throws JSONException, IOException{
+				List<HashMap<String, Object>> list = FileUploadingUtil.readExcel("F:\\test_01.xls");
+				return list;
+		 }
+			
+		  
+			
+			
 }
+
+
+
+
+
+
+
+
+
+
