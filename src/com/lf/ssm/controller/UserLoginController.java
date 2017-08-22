@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.catalina.Session;
 import org.apache.struts2.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,7 +41,7 @@ public class UserLoginController {
 			 * @ModelAndView
 			 */
 			@RequestMapping("/login")
-			public ModelAndView login(HttpSession Session){
+			public ModelAndView login(HttpSession session){
 				String username=(request.getParameter("username")==null||request.getParameter("username").trim().equals(""))?null:request.getParameter("username");
 				String password=(request.getParameter("password")==null||request.getParameter("password").trim().equals(""))?null:request.getParameter("password");
 				ModelAndView  modelAndView = new ModelAndView();
@@ -57,7 +56,7 @@ public class UserLoginController {
 						 modelAndView.addObject("loginFlag", "用户名和密码不能为空！");
 						 modelAndView.setViewName("login");
 					 }else{
-						 Session.setAttribute("username", username);
+						 session.setAttribute("username", username);
 						 modelAndView.addObject("loginFlag", "登录成功,");
 						 modelAndView.setViewName("main");
 					 }
@@ -73,7 +72,6 @@ public class UserLoginController {
 						modelAndView.setViewName("login");
 					}
 			   }
-				 
 				return modelAndView;
 			}
 			
@@ -88,6 +86,16 @@ public class UserLoginController {
 				return modelAndView;
 			}
 			
+			/**
+			 * 返回主页
+			 * @ModelAndView
+			 */
+			@RequestMapping("/toMain")
+			public ModelAndView toMain(){
+				ModelAndView modelAndView  = new ModelAndView();
+				modelAndView.setViewName("main");
+				return modelAndView;
+		 }
 			
 			/**
 			 * 主页到图片抓取页面的跳转
@@ -135,7 +143,7 @@ public class UserLoginController {
 				return list;
 		 }
 			
-		  
+		
 			
 			
 }

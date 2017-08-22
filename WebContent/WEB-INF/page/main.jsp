@@ -8,34 +8,34 @@
 		.clear { zoom:1; }
 		.clear:after { visibility:hidden; display:block; font-size:0; content:"1"; clear:both; height:0; }
 		.main { width:1200px; }
-		.btn span { width:100px; text-align:center;  background:#f00; cursor:pointer; margin:0 5px; display:block; float:left; }
+		.btn span { width:100px; text-align:center;  background:gray; cursor:pointer; margin:0 5px; display:block; float:left; }
 		.con { display:none; border:#033 1px solid; height:600px; width:1000px; }
         #search{
         		display:inline-block;width:32px;height:32px;
         		background-image:url("images/hand.png");
-        		position:0px 0px;background-repeat:no-repeat; 
-        		margin-right:20px;
+        		position:absolute;background-repeat:no-repeat; 
+        		top:15px;right:20px;background-position:0px 0px;
         }
         #search:HOVER{
                 display:inline-block;width:32px;height:32px;
         		background-image:url("images/hand_.png");
-        		position:0px 0px;background-repeat:no-repeat; 
-        		margin-right:20px;
+        		background-repeat:no-repeat; 
         }
         #upload{
                 display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload_.png");
-        		position:0px 0px;background-repeat:no-repeat;
+        		background-image:url("images/upload/upload1_.png");
+        		position:absolute;background-repeat:no-repeat;
+        		top:15px;right:65px;background-position:0px 0px;
         }
         #upload:HOVER{
                 display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload.png");
-        		position:0px 0px;background-repeat:no-repeat;
+        		background-image:url("images/upload/upload1.png");
+        		background-repeat:no-repeat;
         }
         </style>
 	    <script src = "js/jquery-1.9.1.min.js"></script>
 </head>
-<body>
+<body style="background:lightgray;">
 	  <div>
 	      <h2>用户功能主页</h2>
 	  </div>

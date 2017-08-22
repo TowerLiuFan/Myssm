@@ -22,7 +22,18 @@
     .files ul li p{line-height: 20px;text-align: center;}
     .f-close{width:30px;height:30px;display:block;background:url("images/search/tz_image_box.png");background-position:
     			-40px 0px;position:absolute;right:-12px;top:-12px;display:none; }
-    .files ul li:hover .f-close{display: block;}		
+    .files ul li:hover .f-close{display: block;}
+    #back{
+            display:inline-block;width:32px;height:32px;
+	  		background-image:url("images/back_.png");
+	  		position:0px 0px;background-repeat:no-repeat; 
+	  		position:absolute;top:15px;right:20px;
+     }
+     #back:HOVER{
+            display:inline-block;width:32px;height:32px;
+	  		background-image:url("images/back.png");
+	  		position:0px 0px;background-repeat:no-repeat; 
+     }   		
 </style>
 <link type="text/css" rel="stylesheet" href="sg/css/sg.css"></link>
 </head>
@@ -42,6 +53,7 @@
 		    	<h1>Java开发批量采集系统</h1>
 		    	<div class="s-box">
 		    		<input type="text" class="s-txt" name ="url" placeholder="请输入需要下载的地址" /><input type="submit" value="开始下载" class="s-btn"/>
+		    	    <a id="back" href="toMain"></a>
 		    	</div>
 			</div>
 			</form>

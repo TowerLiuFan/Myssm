@@ -4,7 +4,7 @@
 <html>
 <style type="text/css">
     *{margin:0;padding:0;}
-    body{font-size: 12px;font-family: "微软雅黑"}
+    body{font-size: 12px;font-family: "微软雅黑";background:lightgray;}
     .import{width:800px;margin:30px auto;}
     .i-title{font-size:20px;}
     .import .i-btn{width:140px;height:36px;background: #188eee;color:#fff;font-size:14px;
@@ -17,8 +17,19 @@
     .import .i-clear:hover{background:#1080da;} 
     .i-con{border-top:1px solid #D1E0EF;border-bottom: 1px solid #D1E0EF;}
     .i-con .i-list{margin:20px 0;padding-left:10px;}
-    .i-con .i-list:hover{background:#f5f5f5;}
-    .i-con .i-list p{line-height: 46px;font-size:16px;}   
+    .i-con .i-list:hover{background:gray;}
+    .i-con .i-list p{line-height: 46px;font-size:16px;}
+    #back{
+            display:inline-block;width:32px;height:32px;
+	  		background-image:url("images/back_.png");
+	  		position:0px 0px;background-repeat:no-repeat; 
+	  		position:absolute;top:15px;right:20px;
+     }
+     #back:HOVER{
+            display:inline-block;width:32px;height:32px;
+	  		background-image:url("images/back.png");
+	  		position:0px 0px;background-repeat:no-repeat; 
+     }   
 </style>
 <link type="text/css" rel="stylesheet" href="sg/css/sg.css"></link>
 </head>
@@ -27,6 +38,7 @@
 		    <h1 class="i-title">java开发大数据批量导入系统【后台管理核心技术】</h1>
 		    <a href="#" class="i-btn">上传批量数据</a>
 		    <a href="#" class="i-clear">清空数据</a>
+		    <a id="back" href="toMain"></a>
 		    <div class="i-con" id="i-con-info"></div>
 		</div>
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>

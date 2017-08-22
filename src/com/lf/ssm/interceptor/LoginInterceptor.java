@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * @author LF学习
  * <p>拦截器类</p>
- * 用于登录验证的拦截器
+ * 
  */
 public class LoginInterceptor implements HandlerInterceptor{
 
@@ -29,12 +29,12 @@ public class LoginInterceptor implements HandlerInterceptor{
 			return true;
 		}
 		HttpSession session = request.getSession();
-		String loginName = (String) session.getAttribute("loginName");
-		if(loginName != null){
+		String username = (String) session.getAttribute("username");
+		if(username != null){
 			 return true;
 		}else{
-			System.out.println("没有登陆过");
-			request.getRequestDispatcher("WEB-INF/page/login.jsp").forward(request, response); ;
+			System.out.println("之前没有登陆过");
+			request.getRequestDispatcher("WEB-INF/page/login.jsp").forward(request, response);
 		}
 		return false;
 	}
