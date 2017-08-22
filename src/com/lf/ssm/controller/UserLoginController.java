@@ -7,7 +7,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import org.apache.catalina.Session;
 import org.apache.struts2.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -36,11 +38,11 @@ public class UserLoginController {
 	
 			
 			/**
-			 * 登录验证
+			 * 用户登录
 			 * @ModelAndView
 			 */
 			@RequestMapping("/login")
-			public ModelAndView login(){
+			public ModelAndView login(HttpSession Session){
 				String username=(request.getParameter("username")==null||request.getParameter("username").trim().equals(""))?null:request.getParameter("username");
 				String password=(request.getParameter("password")==null||request.getParameter("password").trim().equals(""))?null:request.getParameter("password");
 				ModelAndView  modelAndView = new ModelAndView();
@@ -55,6 +57,7 @@ public class UserLoginController {
 						 modelAndView.addObject("loginFlag", "用户名和密码不能为空！");
 						 modelAndView.setViewName("login");
 					 }else{
+						 Session.setAttribute("username", username);
 						 modelAndView.addObject("loginFlag", "登录成功,");
 						 modelAndView.setViewName("main");
 					 }

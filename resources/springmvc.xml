@@ -32,6 +32,20 @@
    	<!--开启mvc注解驱动  -->
    	<mvc:annotation-driven></mvc:annotation-driven>
    	
+   	<mvc:interceptors>
+   	<!-- 拦截器执行顺序从上往下 -->
+   	      <mvc:interceptor>
+   	      		<!-- 匹配所有请求 -->
+				<mvc:mapping path="/login"/>
+				<bean class="com.lf.ssm.interceptor.LoginInterceptor"></bean>   	      
+   	      </mvc:interceptor>
+<!--    	      <mvc:interceptor> -->
+<!--    	      		匹配所有请求 -->
+<!-- 				<mvc:mapping path="/**"/> -->
+<!-- 				<bean class="com.lf.ssm.interceptor.InterceptorUtil2"></bean>   	       -->
+<!--    	      </mvc:interceptor> -->
+   	</mvc:interceptors>
+   	
    	<!--配置用于注解开发的处理器映射器 -->
     <!-- <bean class = "org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
  
