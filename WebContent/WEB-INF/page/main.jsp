@@ -32,6 +32,17 @@
         		background-image:url("images/upload/upload1.png");
         		background-repeat:no-repeat;
         }
+        #uploadFile{
+        		display:inline-block;width:32px;height:32px;
+        		background-image:url("images/upload/uploadFile_.png");
+        		position:absolute;background-repeat:no-repeat;
+        		top:15px;right:115px;background-position:0px 0px;
+        }
+        #uploadFile:HOVER {
+				display:inline-block;width:32px;height:32px;
+        		background-image:url("images/upload/uploadFile.png");
+        		background-repeat:no-repeat;
+		}		
         </style>
 	    <script src = "js/jquery-1.9.1.min.js"></script>
 </head>
@@ -41,6 +52,7 @@
 	  </div>
 	  <a id="search" href="searchDown"></a>
 	  <a id="upload" href="upLoading"></a>
+	  <a id="uploadFile" href="toUpload"></a>
 	  <div  class="main">
 	      <div class="btn clear">
 	          <span>用户列表</span>
