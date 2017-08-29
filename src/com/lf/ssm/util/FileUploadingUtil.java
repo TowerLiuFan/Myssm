@@ -15,7 +15,7 @@ import jxl.Workbook;
  * 
  * @author LF学习
  * <p>文件上传类</p>
- * 拿到把本地文件数据然后展示到页面上
+ * 拿到本地文件数据然后展示到页面上
  */
 public class FileUploadingUtil {
 
@@ -73,15 +73,15 @@ public class FileUploadingUtil {
 				}
 			}
 		}
-		return list;
-		
 		
 		//解析excel中的数据
 		
 		//将解析解析好的数据存储到容器中（集合，数组，）
 		
 		//返回到页面中进行展示，同步到数据库中
-			
+		
+		return list;
+		
 	}
 
 

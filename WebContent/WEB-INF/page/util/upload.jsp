@@ -25,7 +25,7 @@
 	  		position:0px 0px;background-repeat:no-repeat; 
 	  		position:absolute;top:15px;right:20px;
      }
-     #back:HOVER{
+    #back:HOVER{
             display:inline-block;width:32px;height:32px;
 	  		background-image:url("images/back.png");
 	  		position:0px 0px;background-repeat:no-repeat; 

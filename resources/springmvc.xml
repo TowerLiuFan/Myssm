@@ -27,7 +27,10 @@
    	<context:component-scan base-package="com.lf.ssm.controller" />
    			
    	
-   	
+   	<!-- 配置对静态资源的访问 -->
+<!--    	<mvc:resources location="/images/" mapping="/images/**"></mvc:resources> -->
+<!--    	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources> -->
+<!--    	<mvc:resources location="/sg/" mapping="/sg/**"></mvc:resources> -->
    	
    	<!--开启mvc注解驱动  -->
    	<mvc:annotation-driven></mvc:annotation-driven>
@@ -52,6 +55,8 @@
 		<property name="prefix" value="/WEB-INF/page/"></property> 
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	<mvc:default-servlet-handler/>
 	
    <!-- 定义文件上传的解析器  -->
   	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
