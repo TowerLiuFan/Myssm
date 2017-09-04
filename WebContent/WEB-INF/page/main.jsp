@@ -4,81 +4,28 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<style type='text/css'>    
-		.clear { zoom:1; }
-		.clear:after { visibility:hidden; display:block; font-size:0; content:"1"; clear:both; height:0; }
-		.main { width:1200px; }
-		.btn span { width:100px; text-align:center;  background:gray; cursor:pointer; margin:0 5px; display:block; float:left; }
-		.con { display:none; border:#033 1px solid; height:600px; width:1000px; }
-        #search{
-        		display:inline-block;width:32px;height:32px;
-        		background-image:url("images/hand.png");
-        		position:absolute;background-repeat:no-repeat; 
-        		top:15px;right:20px;background-position:0px 0px;
-        }
-        #search:HOVER{
-                display:inline-block;width:32px;height:32px;
-        		background-image:url("images/hand_.png");
-        		background-repeat:no-repeat; 
-        }
-        #upload{
-                display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload/upload1_.png");
-        		position:absolute;background-repeat:no-repeat;
-        		top:15px;right:65px;background-position:0px 0px;
-        }
-        #upload:HOVER{
-                display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload/upload1.png");
-        		background-repeat:no-repeat;
-        }
-        #uploadFile{
-        		display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload/uploadFile_.png");
-        		position:absolute;background-repeat:no-repeat;
-        		top:15px;right:115px;background-position:0px 0px;
-        }
-        #uploadFile:HOVER {
-				display:inline-block;width:32px;height:32px;
-        		background-image:url("images/upload/uploadFile.png");
-        		background-repeat:no-repeat;
-		}		
-        </style>
-	    <script src = "js/jquery-1.9.1.min.js"></script>
+<script src = "js/jquery-1.9.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main_css.css">
 </head>
 <body style="background:lightgray;">
-	  <div>
-	      <h2>用户功能主页</h2>
+	  <div id="header_main">
+	     <div id="header_bg"></div>
+	     <ul>
+	       <li>首页</li>
+	       <li>关于我</li>
+	       <li>学习生活</li>
+	       <li>碎言碎语</li>
+	       <li>学无止境</li>
+	       <li>留言</li>
+	     </ul>
 	  </div>
-	  <a id="search" href="searchDown"></a>
-	  <a id="upload" href="upLoading"></a>
-	  <a id="uploadFile" href="toUpload"></a>
-	  <div  class="main">
-	      <div class="btn clear">
-	          <span>用户列表</span>
-	          <span>用户编辑</span>
-	      </div>
-	      
-	      <div class="con">
-	          <h2>用户列表区</h2>
-	      </div>
-	      
-	      <div class="con">
-	          <h2>用户编辑区</h2>
-	      </div>
-	  </div>	
+	  <div id="content_main">
+	  </div>
+<!-- 	  <a id="search" href="searchDown"></a> -->
+<!-- 	  <a id="upload" href="upLoading"></a> -->
+<!-- 	  <a id="uploadFile" href="toUpload"></a> -->
 	 
 </body>
-<script type="text/javascript">
-		//eq表示返回一个jQuery对象
-		$(".con").eq(0).show();
-		$(".btn span").click(function(){
-		  var num =$(".btn span").index(this);
-		 //siblings表示取得一个包含匹配的元素集合中每一个元素的所有唯一同辈元素的元素集合
-		  $('.con').eq(num).css({display:'block'}).siblings('.con').css({display:'none'});
-		}); 
-
-</script>
 </html>
 
 

@@ -7,12 +7,12 @@
 <title>Insert title here</title>
 <style type="text/css">
 	*{margin:0;padding:0}
- 	body{background:#ABB7C4;}  
+ 	body{background:gray;}  
     #index{
     		height:580px;width:1280px;
-    		background-image:url("images/world.png");
+    		background-image:url("images/bizhi1.jpg");
     		background-repeat:no-repeat;
-    		margin:20px auto;
+    		margin:30px auto;
     		background-size:1280px 580px;
     		position: relative;
     	}
@@ -56,6 +56,7 @@
 	      <div id="clock"></div>
 	      <a id="toLogin" href="toLogin">进入登录页面</a>
 	  </div>
+	  <embed src="bgm/loveSong.mp3" loop="true" hidden="true" autoplay="true"></embed>
 <script>(function(T,h,i,n,k,P,a,g,e){g=function(){P=h.createElement(i);a=h.getElementsByTagName(i)[0];P.src=k;P.charset="utf-8";P.async=1;a.parentNode.insertBefore(P,a)};T["ThinkPageWeatherWidgetObject"]=n;T[n]||(T[n]=function(){(T[n].q=T[n].q||[]).push(arguments)});T[n].l=+new Date();if(T.attachEvent){T.attachEvent("onload",g)}else{T.addEventListener("load",g,false)}}(window,document,"script","tpwidget","//widget.seniverse.com/widget/chameleon.js"))</script>
 <script>tpwidget("init", {
     "flavor": "bubble",

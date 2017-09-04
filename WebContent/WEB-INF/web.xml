@@ -59,6 +59,11 @@
         <url-pattern>*.gif</url-pattern>    
   </servlet-mapping>
   
+  <servlet-mapping>   
+        <servlet-name>default</servlet-name>    
+        <url-pattern>*.mp3</url-pattern>    
+  </servlet-mapping>
+  
 
   <!--配置restfulURL请求的过滤器  -->
    <filter>

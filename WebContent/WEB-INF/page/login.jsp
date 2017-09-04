@@ -9,7 +9,15 @@
 	*{margin:0px;padding:0;}
 /* 	body{background-image:url("images/5.jpg");background-size:1200px 450px;background-repeat:no-repeat;} */
     #login{width:300px;height:280px;top:200px;left:900px;border: 1px solid gray;position:absolute;}
-	#login{background:white;border-radius:10px;}
+	#login{background:white;border-radius:10px;opacity:0.7;z-index:10;}
+	#login_bg{
+	   	    height:580px;width:1280px;
+    		background-image:url("images/bizhi2.jpg");
+    		background-repeat:no-repeat;
+    		margin:25px auto;
+    		background-size:1280px 580px;
+    		position: relative;
+	}
 	#username{display:block;position:absolute;top:100px;left:23px;outline:none;}
 	#password{display:block;position:absolute;top:160px;left:23px;}
 	#submit{
@@ -44,7 +52,9 @@
        },2000);
 </script>
 </head>
-<body style="background:lightgray";>
+<body style="background:gray";>
+<embed src="bgm/bgm.mp3" loop="true" hidden="true" autoplay="true"></embed>
+		<div id="login_bg"></div>
 		<div id="login">
 		<h3 align="center" style="height:40px;background:#1A8ED9;line-height:40px;border-radius:10px 10px 0px 0px;">用户登录</h3>
 		<form action="login" method = "post">
